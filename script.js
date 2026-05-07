@@ -9,3 +9,15 @@ behavior:"smooth"
 
 })
 })
+
+function expandSpeaker(event, card){
+if(card.classList.contains("expanded")) return
+card.classList.add("expanded")
+}
+
+function collapseSpeaker(event, toggle){
+event.stopPropagation()
+const card = toggle.closest(".speaker-card")
+card.classList.remove("expanded")
+card.scrollIntoView({behavior:"smooth", block:"nearest"})
+}

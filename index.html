@@ -26,6 +26,7 @@ AI Reasoning @ KDD 2026
 <a href="#speakers">Speakers</a>
 <a href="#organizers">Organizers</a>
 <a href="#location">Location</a>
+<a href="#contact">Contact</a>
 </div>
 
 </div>
@@ -124,24 +125,54 @@ next-generation reasoning systems.
 <div class="grid">
 
 
-<div class="card">
+<div class="card speaker-card" onclick="expandSpeaker(event, this)">
 
-<img src="images/placeholder.jpg">
+<img src="images/invited_speakers/junjie_tang.jpg">
 
-<h3>TBD</h3>
+<h3>Junjie Tang</h3>
 
-<p></p>
+<p>Sr. Principal<br>AWS</p>
+
+<div class="speaker-preview">
+<p class="talk-label">Talk Abstract</p>
+<p class="talk-text">Large language model coding agents exhibit impressive reasoning capabilities, yet their reliability on real-world software engineering tasks remains inconsistent. We present evidence that the quality of agent reasoning is as much a function of the reasoning environment as it is of the underlying model...</p>
+<span class="expand-toggle">Read more &#9662;</span>
+</div>
+
+<div class="speaker-full">
+<p class="talk-label">Talk Abstract</p>
+<p>Large language model coding agents exhibit impressive reasoning capabilities, yet their reliability on real-world software engineering tasks remains inconsistent. We present evidence that the quality of agent reasoning is as much a function of the reasoning environment as it is of the underlying model. Our approach, harness-guided reasoning, wraps coding agents in a 4-pillar structural constraint framework that provides feedforward guides (pre-reasoning constraints) and feedback sensors (post-reasoning correction signals), enabling iterative refinement without modifying model weights or prompts.</p>
+<p>We evaluate this approach using AgentCorp, a multi-agent software development simulation where hierarchical LLM teams execute 10-day engineering sprints across three enterprise domains (healthcare/HIPAA, payments/Stripe, robotics/CDK). In controlled experiments comparing unconstrained agents against harness-governed agents using identical models (Claude Opus on Amazon Bedrock), we observe test pass rates improving from baseline to 99-100% in two domains, with the harness acting as a reasoning scaffold that catches errors through structured planning checkpoints and iterative tool-use feedback loops.</p>
+<p>Most strikingly, we demonstrate that structured reasoning constraints can enable emergent discovery: in an NKI kernel optimization task on AWS Trainium, an agent operating within a constrained compile-profile-reason loop that reduced kernel latency from 67ms to 6.2ms autonomously discovered a novel K-scaling optimization, scaling the Key tensor instead of the Query tensor to reduce SBUF memory pressure by 4MB at 16K sequence length. This optimization, not documented in any existing literature, emerged from 6 rounds of iterative refinement guided by hardware profiling feedback, illustrating how structured reasoning environments unlock capabilities that single-shot reasoning cannot achieve.</p>
+<p class="talk-label">Bio</p>
+<p>Junjie Tang is a Sr. Principal at AWS with 9 years of experience driving AI adoption across enterprise customers. His research focuses on agentic AI systems, multi-agent coordination, and hardware-aware kernel optimization on AWS Trainium. He leads the development of AgentCorp (multi-agent software simulation), harness-engineering-kit (agent governance framework), and kernel-forge (NKI kernel generation on Trainium). His blog on NKI agent optimization, &ldquo;Beating Claude Opus 4.5 at Kernel Generation with a 3B-Active RL Agent&rdquo;, demonstrated that constrained iterative reasoning can outperform frontier models at hardware-level tasks.</p>
+<span class="expand-toggle" onclick="collapseSpeaker(event, this)">Show less &#9652;</span>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="card speaker-card" onclick="expandSpeaker(event, this)">
 
-<img src="images/placeholder.jpg">
+<img src="images/invited_speakers/behrooz.jpg">
 
-<h3>TBD</h3>
+<h3>Behrooz Omidvar-Tehrani</h3>
 
-<p></p>
+<p>Senior Applied Scientist<br>AWS</p>
+
+<div class="speaker-preview">
+<p class="talk-label">Talk Abstract</p>
+<p class="talk-text">AI coding agents have evolved from stateless code completers into persistent systems that plan, use tools, self-debug, and collaborate with developers. Building such agents demands more than a powerful language model...</p>
+<span class="expand-toggle">Read more &#9662;</span>
+</div>
+
+<div class="speaker-full">
+<p class="talk-label">Talk Abstract</p>
+<p>AI coding agents have evolved from stateless code completers into persistent systems that plan, use tools, self-debug, and collaborate with developers. Building such agents demands more than a powerful language model and requires reasoning that learns from experience, memory that carries knowledge across sessions, and interaction models that keep humans in control wherever needed. As these agents move from generating code to owning entire development workflows, the real challenge shifts from capability to trust. Generation is largely solved. What remains is alignment: can agents build what developers actually meant, self-correct reliably, grow from past interactions, and stay consistent over time? This talk navigates the journey from language models to fully agentic coding systems, weaving together the roles of reasoning, self-correction, continual learning, memory, and human-AI collaboration in shaping agents that not only write code but earn the trust of the developers they serve.</p>
+<p class="talk-label">Bio</p>
+<p>Behrooz Omidvar-Tehrani is a Senior Applied Scientist and Science Manager at AWS Agentic AI, working on next-generation coding agents and developer-focused AI systems. He has published across venues such as ICML, ICLR, CHI, CIKM, SIGMOD, and KDD. His research focuses on scalable, reliable, and human-centered AI systems for software engineering, with an emphasis on agentic reasoning, continual learning, and self-improving agents.</p>
+<span class="expand-toggle" onclick="collapseSpeaker(event, this)">Show less &#9652;</span>
+</div>
 
 </div>
 
@@ -238,6 +269,20 @@ next-generation reasoning systems.
 <p>
 
 Jeju Island, South Korea
+
+</p>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>
+
+For inquiries, please email <a href="mailto:AIreasoning2026@kdd.org">AIreasoning2026@kdd.org</a>.
 
 </p>
 

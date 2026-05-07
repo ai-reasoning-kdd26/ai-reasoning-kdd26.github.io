@@ -6,9 +6,12 @@ color:#333;
 }
 
 header{
-background:linear-gradient(135deg,#1e3c72,#2a5298);
+background:
+linear-gradient(135deg, rgba(30,60,114,0.4), rgba(42,82,152,0.3)),
+url('images/jeju.jpg') center/cover no-repeat;
 color:white;
 padding-bottom:80px;
+text-shadow:0 2px 8px rgba(0,0,0,0.4);
 }
 
 .nav{
@@ -53,15 +56,18 @@ gap:30px;
 
 .card{
 background:white;
+border:1px solid rgba(30,60,114,0.18);
 border-radius:10px;
-box-shadow:0 4px 20px rgba(0,0,0,0.08);
+box-shadow:0 6px 24px rgba(30,60,114,0.18);
 padding:25px;
 text-align:center;
-transition:transform .2s;
+transition:transform .2s, box-shadow .2s, border-color .2s;
 }
 
 .card:hover{
 transform:translateY(-6px);
+border-color:rgba(30,60,114,0.35);
+box-shadow:0 12px 32px rgba(30,60,114,0.25);
 }
 
 .card img{
@@ -70,6 +76,139 @@ height:140px;
 border-radius:50%;
 object-fit:cover;
 margin-bottom:10px;
+}
+
+.speaker-card{
+cursor:pointer;
+text-align:left;
+transition:transform .2s, box-shadow .3s;
+}
+
+.speaker-card img,
+.speaker-card h3,
+.speaker-card > p{
+text-align:center;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+.speaker-preview,
+.speaker-full{
+margin-top:15px;
+font-size:14px;
+line-height:1.6;
+color:#444;
+}
+
+.speaker-full{
+display:none;
+}
+
+.speaker-card.expanded{
+grid-column:1 / -1;
+cursor:default;
+box-shadow:0 10px 40px rgba(30,60,114,0.18);
+display:grid;
+grid-template-columns:240px 1fr;
+grid-template-rows:auto;
+gap:30px 40px;
+align-items:start;
+text-align:left;
+padding:40px 45px;
+}
+
+.speaker-card.expanded:hover{
+transform:none;
+}
+
+.speaker-card.expanded .speaker-preview{
+display:none;
+}
+
+.speaker-card.expanded img{
+grid-column:1;
+grid-row:1;
+width:200px;
+height:200px;
+margin:0 auto;
+display:block;
+}
+
+.speaker-card.expanded h3{
+grid-column:1;
+grid-row:2;
+text-align:center;
+margin:0;
+padding:0 8px;
+}
+
+.speaker-card.expanded > p{
+grid-column:1;
+grid-row:3;
+text-align:center;
+margin:0;
+padding:0 8px;
+color:#666;
+}
+
+.speaker-card.expanded .speaker-full{
+display:block;
+grid-column:2;
+grid-row:1 / span 3;
+max-width:820px;
+font-size:15px;
+line-height:1.65;
+}
+
+.speaker-card.expanded .speaker-full p{
+margin:0 0 12px 0;
+}
+
+@media (max-width: 700px){
+.speaker-card.expanded{
+grid-template-columns:1fr;
+padding:25px;
+}
+.speaker-card.expanded img,
+.speaker-card.expanded h3,
+.speaker-card.expanded > p,
+.speaker-card.expanded .speaker-full{
+grid-column:1;
+grid-row:auto;
+}
+}
+
+.talk-label{
+font-weight:600;
+color:#1e3c72;
+margin-top:10px;
+margin-bottom:6px;
+text-transform:uppercase;
+font-size:12px;
+letter-spacing:0.5px;
+}
+
+.talk-text{
+margin:0 0 10px 0;
+}
+
+.expand-toggle{
+display:inline-block;
+margin-top:8px;
+color:#2a5298;
+font-weight:600;
+font-size:13px;
+}
+
+#contact a{
+color:#2a5298;
+text-decoration:none;
+font-weight:600;
+}
+
+#contact a:hover{
+text-decoration:underline;
 }
 
 footer{
