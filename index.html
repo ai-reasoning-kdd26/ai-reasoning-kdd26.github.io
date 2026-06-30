@@ -26,6 +26,7 @@ AI Reasoning @ KDD 2026
 <a href="#speakers">Speakers</a>
 <a href="#organizers">Organizers</a>
 <a href="#location">Location</a>
+<a href="#sponsors">Sponsor</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -218,13 +219,29 @@ next-generation reasoning systems.
 </div>
 
 
-<div class="card">
+<div class="card speaker-card" onclick="expandSpeaker(event, this)">
 
-<img src="images/placeholder.jpg">
+<img src="images/invited_speakers/Minjae_lee.jpg">
 
-<h3>TBD</h3>
+<h3>Minjae Lee</h3>
 
-<p></p>
+<p>AI Researcher<br>FuriosaAI</p>
+
+<div class="speaker-preview">
+<p class="talk-label">Power-Efficient AI Reasoning for the Agentic Inference Era</p>
+<p class="talk-text">Large language models are moving toward an agentic inference era, where they perform wider search and longer reasoning with tool interactions, thereby spending substantially more computation at test time. As this shift accelerates, model usage is rapidly increasing, and the energy required to run AI systems is becoming a fundamental bottleneck for keeping AI scalable...</p>
+<span class="expand-toggle">Read more &#9662;</span>
+</div>
+
+<div class="speaker-full">
+<p class="talk-label">Power-Efficient AI Reasoning for the Agentic Inference Era</p>
+<p>Large language models are moving toward an agentic inference era, where they perform wider search and longer reasoning with tool interactions, thereby spending substantially more computation at test time. As this shift accelerates, model usage is rapidly increasing, and the energy required to run AI systems, from individual servers to large-scale data centers, is becoming a fundamental bottleneck for keeping AI scalable. In this talk, we introduce FuriosaAI's inference-first approach to this challenge, spanning the vertical stack from hardware architecture to software systems and deep learning algorithms. Toward high-performance, power-efficient inference with flexible programmability, we first discuss why power efficiency has become central to LLM deployment, and how FuriosaAI's Tensor Contraction Processor (TCP) architecture is designed to support efficient LLM inference through flexible dataflow and predictable performance. We then connect this hardware-software foundation to reasoning-focused algorithmic research, including inference-engaged training such as reinforcement learning and on-policy distillation, as well as inference scaling and acceleration methods such as speculative decoding and test-time compute scaling. The talk highlights how co-design across silicon, software, and algorithms can enable more capable, efficient, and scalable AI reasoning systems.</p>
+<p class="talk-label">Bio</p>
+<p>Minjae Lee is an AI Researcher on FuriosaAI's Algorithm team, working on agentic LLM inference. His research spans inference acceleration, scaling, and training for agentic LLMs, including speculative decoding, test-time compute scaling, and reinforcement learning. He also works on healthcare AI, including electronic health records and medical LLM applications. He received his M.S. in Artificial Intelligence from KAIST under Prof. Edward Choi and his B.S. in Industrial Engineering from KAIST, graduating Summa Cum Laude.</p>
+<p class="talk-label">About FuriosaAI</p>
+<p>FuriosaAI is building inference-first AI infrastructure. Its flagship RNGD accelerator, based on the Tensor Contraction Processor (TCP) architecture, is designed to deliver (1) high-performance execution, (2) power-efficient inference, and (3) flexible programmability for LLMs and multimodal models. By co-designing hardware, compiler, platform, and algorithms, FuriosaAI aims to make large-scale AI deployment practical for real-world data centers.</p>
+<span class="expand-toggle" onclick="collapseSpeaker(event, this)">Show less &#9652;</span>
+</div>
 
 </div>
 
@@ -301,6 +318,22 @@ next-generation reasoning systems.
 Jeju Island, South Korea
 
 </p>
+
+</section>
+
+
+
+<section id="sponsors">
+
+<h2>Sponsor</h2>
+
+<div class="sponsor-grid">
+
+<a href="https://www.furiosa.ai" target="_blank" rel="noopener" class="sponsor">
+<img src="images/FuriosaAI.png" alt="Furiosa">
+</a>
+
+</div>
 
 </section>
 

@@ -201,6 +201,41 @@ font-weight:600;
 font-size:13px;
 }
 
+.sponsor-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:40px;
+}
+
+.sponsor{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+background:white;
+border:1px solid rgba(30,60,114,0.18);
+border-radius:10px;
+box-shadow:0 6px 24px rgba(30,60,114,0.18);
+padding:30px 45px;
+transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+
+.sponsor:hover{
+transform:translateY(-6px);
+border-color:rgba(30,60,114,0.35);
+box-shadow:0 12px 32px rgba(30,60,114,0.25);
+}
+
+.sponsor img{
+max-width:260px;
+max-height:90px;
+width:auto;
+height:auto;
+object-fit:contain;
+display:block;
+}
+
 #contact a{
 color:#2a5298;
 text-decoration:none;
